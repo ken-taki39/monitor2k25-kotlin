@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Day 1 | MONITOR 2k25</title>
+
+  <!-- Fonts + Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="retro">
+
+  <!-- Synthwave Background -->
+  <div class="synthwave-bg">
+    <svg class="synthwave-svg" width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="none" style="position:fixed;top:0;left:0;z-index:-2;">
+      <circle cx="960" cy="400" r="180" fill="url(#sunGradient)" opacity="0.8">
+        <animate attributeName="cy" values="400;420;400" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <defs>
+        <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffef8a"/>
+          <stop offset="80%" stop-color="#ff3cac"/>
+          <stop offset="100%" stop-color="#ff007f"/>
+        </radialGradient>
+      </defs>
+      <path d="M0,800 Q600,600 1200,800 T1920,800 V1080 H0 Z" fill="#2d004d" opacity="0.8"/>
+      <path d="M0,900 Q800,700 1920,900 V1080 H0 Z" fill="#4b007a" opacity="0.7"/>
+      <g stroke="#00ffd5" stroke-width="2" opacity="0.3">
+        <line x1="0" y1="1000" x2="1920" y2="1000"/>
+        <line x1="0" y1="1040" x2="1920" y2="1040"/>
+        <line x1="0" y1="1080" x2="1920" y2="1080"/>
+        <line x1="240" y1="800" x2="960" y2="1080"/>
+        <line x1="480" y1="800" x2="1200" y2="1080"/>
+        <line x1="720" y1="800" x2="1440" y2="1080"/>
+        <line x1="960" y1="800" x2="1680" y2="1080"/>
+        <line x1="1200" y1="800" x2="1920" y2="1080"/>
+        <line x1="0" y1="800" x2="720" y2="1080"/>
+      </g>
+    </svg>
+  </div>
+  <div class="grain"></div>
+
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="hero-container">
+      <a class="brand" href="M About us.html">
+        <img src="src/kotlin logo/eKotlin_Icon.png" alt="Kotlin Logo" class="kotlin-logo" />
+      </a>
+      <nav class="nav-links">
+        <a href="home.html">Main Page</a>
+        <a href="#resume">Resumes</a>
+        <a href="#socials">Socials</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Resume Content -->
+  <main>
+    <section id="resume" class="panel">
+      <div class="container">
+        <h1 class="retro-title">Day 1</h1>
+        <img src="src/resume/day 1.jpg" alt="Day 1 MONITOR 2k25" class="img-thumb2" width="550">
+        <p>Hari pertama atau pembukaan MONITOR ini diisi dengan pengenalan anggota HIMATIF, Pematerian mengenai STADIUM GENERAL dan EKSPETASI.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="container">
+        <h2>HIMATIF</h2>
+         <img src="src/img/Himatif (1).png" alt="logo himatif" class="img-thumb3" width="500" height="200">
+       <p> HIMATIF (Himpunan Mahasiswa Teknik Informatika) merupakan organisasi himpunan mahasiswa yang saat ini diketua oleh Kang Diman Faturrahman, himpunan mahasiswa ini berfungsi sebagai wadah aspirasi sekaligus sarana pengembangan diri. Melalui HIMATIF, mahasiswa Teknik Informatika dapat menyalurkan ide, berkolaborasi, serta mengasah keterampilan akademik maupun nonakademik. </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="container">
+        <h2>BIDANG</h2>
+        <ul>
+          <li>Ex Officio (diketuai oleh Kang Diman Faturrahman) </li>
+          <li>Pengembangan Aparatur Organisasi ( Ketua: Kang Angga Gustian) </li>
+          <li>Sosial Masyarakat (ketua: Raditya Dwi Santoso)</li>
+          <li>Keislaman (ketua: teh Irma Rahmadillah)</li>
+          <li>Kajian Strategi dan Advokasi (ketua: Kang Irsal Shydiq)</li>
+          <li>Nalar (ketua: Kang Alhan Huspin)</li>
+          <li>Kewirausahaan (ketua: Kang Daffa Rabbani)</li>
+          <li>Seni dan Olahraga (ketua: Kang Abdul Latif)</li>
+        </ul>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container cta-row">
+      <a class="btn-synthwave retro-back" href="home.html">← Back to Gallery</a>
+      <a class="btn-retro retro-back" href="i resume day1 p2.html"> next Material ➝ </a>
+     
+    </div>
+  </footer>
+
+<script>
+let lastScroll = window.scrollY;
+const containerTop = document.querySelector('.container-top');
+const heroContainer = document.querySelector('.hero-container');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+
+  if (heroContainer) {
+    if (currentScroll > 60) {
+      heroContainer.classList.add('shrink');
+    } else {
+      heroContainer.classList.remove('shrink');
+    }
+  }
+
+  if (containerTop) {
+    if (currentScroll > lastScroll) {
+      containerTop.classList.add('swipe-up');
+      containerTop.classList.remove('swipe-in');
+    } else {
+      containerTop.classList.remove('swipe-up');
+      containerTop.classList.add('swipe-in');
+    }
+  }
+
+  lastScroll = currentScroll;
+});
+
+if (containerTop) {
+  containerTop.classList.add('swipe-in');
+}
+</script>
+
+</body>
+</html>
